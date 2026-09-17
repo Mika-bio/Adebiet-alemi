@@ -10,7 +10,7 @@ export function Footer() {
             <BookOpen className="h-5 w-5 text-gold" />
             <span className="font-serif text-xl font-bold">Әдебиет Әлемі</span>
           </div>
-          <p className="text-sm text-cream/70 leading-relaxed">
+          <p className="text-sm leading-relaxed text-cream/70">
             Қазақ мектептеріне арналған әдебиет платформасы. Кітаптар, тарихи
             фильмдер, тапсырмалар және ұлы ақындар мұрасы — бір жерде.
           </p>
@@ -41,10 +41,11 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="mb-3 font-serif text-lg text-gold">Демо нұсқа</h3>
-          <p className="text-sm text-cream/70 leading-relaxed">
-            Бұл — оқу мақсатындағы демо қосымша. Авторизация браузердің
-            жергілікті жадында сақталады.
+          <h3 className="mb-3 font-serif text-lg text-gold">Платформа туралы</h3>
+          <p className="text-sm leading-relaxed text-cream/70">
+            Оқушылар мен мұғалімдерге арналған әдебиет кеңістігі. Жеке кабинет
+            арқылы кітап оқу, тапсырма орындау және мәдени мұраны тыңдауға
+            болады.
           </p>
         </div>
       </div>

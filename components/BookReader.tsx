@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { BookOpen, ChevronLeft, ChevronRight, Maximize2, Minimize2, X } from "lucide-react";
 
-function splitIntoPages(text: string, maxLen = 720): string[] {
+function splitIntoPages(text: string, maxLen = 560): string[] {
   const paragraphs = text
     .split(/\n+/)
     .map((p) => p.trim())

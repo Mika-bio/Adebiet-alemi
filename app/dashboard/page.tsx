@@ -55,7 +55,7 @@ function DashboardContent() {
     {
       href: "/kitaptar",
       title: "Кітапхана",
-      desc: "Оқу материалдарын басқару (демо)",
+      desc: "Оқу материалдарын қарау және ұйымдастыру",
       icon: BookOpen,
     },
     {
@@ -136,19 +136,6 @@ function DashboardContent() {
           </Link>
         ))}
       </div>
-
-      {isTeacher && (
-        <div className="mt-8 card border-dashed">
-          <h3 className="font-serif text-lg font-bold text-burgundy">
-            Демо ескертпе
-          </h3>
-          <p className="mt-1 text-sm text-burgundy/70">
-            Мұғалім панелінің толық нұсқасында бағалау, сынып тізімі және
-            тапсырма құру болады. Қазіргі демода барлық материалдарды қарау
-            және тапсырмаларды сынақтан өткізу қолжетімді.
-          </p>
-        </div>
-      )}
     </div>
   );
 }
