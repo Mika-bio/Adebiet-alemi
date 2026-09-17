@@ -7,6 +7,7 @@ import {
   Users,
   Sparkles,
   ArrowRight,
+  ClipboardList,
 } from "lucide-react";
 import { BOOKS, WRITERS } from "@/lib/data";
 import { BookCover } from "@/components/BookCover";
@@ -41,6 +42,12 @@ const features = [
     title: "Ақындар",
     desc: "Ұлы қаламгерлердің өмірі мен мұрасы",
     icon: Users,
+  },
+  {
+    href: "/okusymen-zhumys",
+    title: "Оқушымен жұмыс",
+    desc: "Әдістеме, талдау, топтық жұмыс және бағалау критерийлері",
+    icon: ClipboardList,
   },
 ];
 
@@ -187,6 +194,9 @@ export default function HomePage() {
               <p className="mt-1 text-sm text-burgundy/60">{w.role}</p>
               <p className="mt-3 line-clamp-3 text-sm text-burgundy/75">
                 {w.bio}
+              </p>
+              <p className="mt-2 text-xs text-gold-dark">
+                Негізгі шығармалар: {w.works.length} · толық ашуға болады
               </p>
             </Link>
           ))}

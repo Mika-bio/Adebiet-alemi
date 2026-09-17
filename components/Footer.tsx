@@ -38,6 +38,11 @@ export function Footer() {
                 Ақындар мен жазушылар
               </Link>
             </li>
+            <li>
+              <Link href="/okusymen-zhumys" className="hover:text-gold">
+                Оқушымен жұмыс
+              </Link>
+            </li>
           </ul>
         </div>
         <div>

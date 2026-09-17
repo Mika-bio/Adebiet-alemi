@@ -14,8 +14,8 @@ export default function AqyndarPage() {
         <h1 className="section-title">Ақындар мен жазушылар</h1>
         <div className="ornament" />
         <p className="mx-auto max-w-xl text-burgundy/70">
-          Қазақ әдебиетінің классиктері. Өмірбаяны, шығармалары және рухани
-          мұрасы.
+          Қазақ әдебиетінің классиктері — энциклопедиялық өмірбаян, шығармашылық
+          кезеңдер және негізгі шығармаларды толық ашып оқу.
         </p>
       </div>
 
@@ -43,6 +43,9 @@ export default function AqyndarPage() {
               <p className="mt-1 text-sm text-burgundy/60">{writer.role}</p>
               <p className="mt-3 line-clamp-3 text-sm text-burgundy/75">
                 {writer.bio}
+              </p>
+              <p className="mt-2 text-xs text-burgundy/50">
+                Негізгі шығармалар: {writer.works.length}
               </p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-burgundy group-hover:text-gold-dark">
                 Толығырақ <ArrowRight className="h-4 w-4" />

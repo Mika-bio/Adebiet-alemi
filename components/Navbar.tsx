@@ -15,10 +15,11 @@ import {
   Users,
   X,
   LayoutDashboard,
+  ClipboardList,
 } from "lucide-react";
 import { useAuth } from "@/lib/auth";
 
-const links = [
+const baseLinks = [
   { href: "/", label: "Басты бет", icon: Home },
   { href: "/kitaptar", label: "Кітаптар", icon: BookOpen },
   { href: "/videolar", label: "Тарихи кино", icon: PlayCircle },
@@ -29,10 +30,19 @@ const links = [
 
 export function Navbar() {
   const pathname = usePathname();
-  const { user, logout, loading } = useAuth();
+  const { user, logout, loading, isTeacher } = useAuth();
   const [open, setOpen] = useState(false);
 
   const roleLabel = user?.role === "teacher" ? "Мұғалім" : "Оқушы";
+
+  const links = [
+    ...baseLinks,
+    {
+      href: "/okusymen-zhumys",
+      label: isTeacher ? "Оқушымен жұмыс" : "Оқушыға арналған",
+      icon: ClipboardList,
+    },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-burgundy/10 bg-cream-50/95 backdrop-blur-md">
@@ -51,14 +61,14 @@ export function Navbar() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-1 xl:flex">
           {links.map(({ href, label, icon: Icon }) => {
             const active = pathname === href || pathname.startsWith(href + "/");
             return (
               <Link
                 key={href}
                 href={href}
-                className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition ${
+                className={`flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-sm font-medium transition ${
                   active
                     ? "bg-burgundy text-cream"
                     : "text-burgundy/70 hover:bg-burgundy/5 hover:text-burgundy"
@@ -103,7 +113,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className="rounded-lg p-2 text-burgundy lg:hidden"
+            className="rounded-lg p-2 text-burgundy xl:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Меню"
           >
@@ -113,7 +123,7 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-burgundy/10 bg-cream-50 px-4 py-3 lg:hidden">
+        <div className="border-t border-burgundy/10 bg-cream-50 px-4 py-3 xl:hidden">
           <nav className="flex flex-col gap-1">
             {links.map(({ href, label, icon: Icon }) => {
               const active =

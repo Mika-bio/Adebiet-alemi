@@ -43,6 +43,12 @@ function DashboardContent() {
       desc: "Лиро-эпикалық мұра",
       icon: Music,
     },
+    {
+      href: "/okusymen-zhumys",
+      title: "Оқушыға арналған",
+      desc: "Сабақ белсенділіктері мен кеңестер",
+      icon: ClipboardList,
+    },
   ];
 
   const teacherLinks = [
@@ -69,6 +75,12 @@ function DashboardContent() {
       title: "Ақындар картотекасы",
       desc: "Өмірбаяндық материалдар",
       icon: Users,
+    },
+    {
+      href: "/okusymen-zhumys",
+      title: "Оқушымен жұмыс",
+      desc: "Әдістеме, талдау, бағалау критерийлері",
+      icon: ClipboardList,
     },
   ];
 
