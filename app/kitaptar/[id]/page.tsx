@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Quote, Calendar, Tag } from "lucide-react";
 import { BOOKS, getBook } from "@/lib/data";
 import { BookCover } from "@/components/BookCover";
+import { BookReader } from "@/components/BookReader";
 
 export function generateStaticParams() {
   return BOOKS.map((b) => ({ id: b.id }));
@@ -27,12 +28,21 @@ export default function BookDetailPage({
       </Link>
 
       <div className="grid gap-10 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr]">
-        <BookCover
-          title={book.title}
-          author={book.author}
-          coverClass={book.coverClass}
-          className="mx-auto w-full max-w-[240px] md:mx-0"
-        />
+        <div>
+          <BookCover
+            title={book.title}
+            author={book.author}
+            coverClass={book.coverClass}
+            className="mx-auto w-full max-w-[240px] md:mx-0"
+          />
+          <div className="mt-4 flex justify-center md:justify-start">
+            <BookReader
+              title={book.title}
+              author={book.author}
+              fullText={book.fullText}
+            />
+          </div>
+        </div>
 
         <div>
           <h1 className="font-serif text-3xl font-bold text-burgundy md:text-4xl">
@@ -69,6 +79,11 @@ export default function BookDetailPage({
             <blockquote className="font-serif text-lg italic leading-relaxed text-burgundy/85">
               {book.excerpt}
             </blockquote>
+            <p className="mt-4 text-sm text-burgundy/55">
+              Толық мәтінді оқу үшін жоғарыдағы «Кітапты оқу» түймесін басыңыз.
+              Беттерді аударып (алдыңғы / келесі), пернелермен де басқаруға
+              болады.
+            </p>
           </div>
         </div>
       </div>

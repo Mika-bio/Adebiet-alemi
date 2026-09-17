@@ -55,13 +55,13 @@ export default function LoginPage() {
           <div>
             <label className="mb-1.5 flex items-center gap-1.5 text-sm font-medium text-burgundy">
               <User className="h-4 w-4" />
-              Логин
+              Пайдаланушы аты
             </label>
             <input
               className="input-field"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="student немесе teacher"
+              placeholder="оқушы немесе мұғалім (student / teacher)"
               autoComplete="username"
               required
             />

@@ -21,9 +21,9 @@ import { useAuth } from "@/lib/auth";
 const links = [
   { href: "/", label: "Басты бет", icon: Home },
   { href: "/kitaptar", label: "Кітаптар", icon: BookOpen },
-  { href: "/videolar", label: "Видеолар", icon: PlayCircle },
+  { href: "/videolar", label: "Тарихи кино", icon: PlayCircle },
   { href: "/tapsyrmalar", label: "Тапсырмалар", icon: GraduationCap },
-  { href: "/muzyka", label: "Музыка", icon: Music },
+  { href: "/muzyka", label: "Жыр-күй", icon: Music },
   { href: "/aqyndar", label: "Ақындар", icon: Users },
 ];
 

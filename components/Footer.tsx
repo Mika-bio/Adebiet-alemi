@@ -11,8 +11,8 @@ export function Footer() {
             <span className="font-serif text-xl font-bold">Әдебиет Әлемі</span>
           </div>
           <p className="text-sm text-cream/70 leading-relaxed">
-            Қазақ мектептеріне арналған әдебиет платформасы. Кітаптар, видеолар,
-            тапсырмалар және ұлы ақындар мұрасы — бір жерде.
+            Қазақ мектептеріне арналған әдебиет платформасы. Кітаптар, тарихи
+            фильмдер, тапсырмалар және ұлы ақындар мұрасы — бір жерде.
           </p>
         </div>
         <div>
@@ -25,7 +25,7 @@ export function Footer() {
             </li>
             <li>
               <Link href="/videolar" className="hover:text-gold">
-                Видеолар
+                Тарихи фильмдер
               </Link>
             </li>
             <li>
@@ -43,8 +43,8 @@ export function Footer() {
         <div>
           <h3 className="mb-3 font-serif text-lg text-gold">Демо нұсқа</h3>
           <p className="text-sm text-cream/70 leading-relaxed">
-            Бұл — оқу мақсатындағы демо қосымша. Авторизация localStorage
-            арқылы жұмыс істейді.
+            Бұл — оқу мақсатындағы демо қосымша. Авторизация браузердің
+            жергілікті жадында сақталады.
           </p>
         </div>
       </div>

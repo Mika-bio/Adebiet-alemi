@@ -33,14 +33,14 @@ function DashboardContent() {
     },
     {
       href: "/videolar",
-      title: "Видео сабақтар",
-      desc: `${VIDEOS.length} бейнематериал`,
+      title: "Тарихи кино",
+      desc: `${VIDEOS.length} тарихи фильм`,
       icon: PlayCircle,
     },
     {
       href: "/muzyka",
-      title: "Музыка тыңдау",
-      desc: "Әдеби атмосфера",
+      title: "Жыр-терме-күй",
+      desc: "Лиро-эпикалық мұра",
       icon: Music,
     },
   ];
@@ -60,14 +60,14 @@ function DashboardContent() {
     },
     {
       href: "/videolar",
-      title: "Видео ресурстар",
-      desc: "Сабаққа арналған бейнелер",
+      title: "Тарихи фильмдер",
+      desc: "Сабаққа арналған кино",
       icon: PlayCircle,
     },
     {
       href: "/aqyndar",
       title: "Ақындар картотекасы",
-      desc: "Биографиялық материалдар",
+      desc: "Өмірбаяндық материалдар",
       icon: Users,
     },
   ];

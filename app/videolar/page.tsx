@@ -13,13 +13,13 @@ export default function VideolarPage() {
       <div className="mb-10 text-center">
         <p className="mb-2 inline-flex items-center gap-2 text-sm text-gold-dark">
           <PlayCircle className="h-4 w-4" />
-          Бейнематериалдар
+          Қазақ тарихи кино
         </p>
-        <h1 className="section-title">Видеолар</h1>
+        <h1 className="section-title">Тарихи фильмдер</h1>
         <div className="ornament" />
         <p className="mx-auto max-w-xl text-burgundy/70">
-          Әдебиет сабақтарына арналған білім беру бейнелері. Картаны басып,
-          YouTube арқылы көріңіз.
+          Абылай хан, Кенесары, Амангелді, соғыс қаһармандары және басқа
+          тарихи фильмдер. Картаны басып, бейнеарна арқылы көріңіз.
         </p>
       </div>
 

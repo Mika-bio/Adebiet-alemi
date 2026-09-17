@@ -93,3 +93,36 @@ body {
   );
   border-radius: 4px 0 0 4px;
 }
+
+/* Page-turn feel for book reader */
+@keyframes page-next {
+  0% {
+    opacity: 0.35;
+    transform: translateX(28px) rotateY(-8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+@keyframes page-prev {
+  0% {
+    opacity: 0.35;
+    transform: translateX(-28px) rotateY(8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+.animate-page-next {
+  animation: page-next 0.32s ease-out;
+  transform-origin: left center;
+}
+.animate-page-prev {
+  animation: page-prev 0.32s ease-out;
+  transform-origin: right center;
+}
+.book-page {
+  perspective: 1200px;
+}
