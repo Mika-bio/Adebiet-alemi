@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --burgundy: #4a0e1f;
+  --cream: #f7f1e8;
+  --gold: #c9a227;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #2a0812;
+  background: #f7f1e8;
+  font-family: var(--font-source-sans), system-ui, sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-burgundy px-5 py-2.5 text-sm font-semibold text-cream shadow-soft transition hover:bg-burgundy-600 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-cream;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-burgundy/20 bg-cream-50 px-5 py-2.5 text-sm font-semibold text-burgundy transition hover:border-burgundy/40 hover:bg-cream-200 focus:outline-none focus:ring-2 focus:ring-gold;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-burgundy-900 shadow-soft transition hover:bg-gold-light focus:outline-none focus:ring-2 focus:ring-burgundy;
+  }
+
+  .card {
+    @apply rounded-2xl border border-burgundy/10 bg-cream-50 p-5 shadow-soft transition hover:shadow-book;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl font-bold text-burgundy md:text-4xl;
+  }
+
+  .ornament {
+    @apply mx-auto my-4 h-px w-24 bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  .prose-literary {
+    @apply leading-relaxed text-burgundy-800/90;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-burgundy/20 bg-cream-50 px-4 py-2.5 text-burgundy placeholder:text-burgundy/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30;
+  }
+}
+
+/* Book cover gradient patterns */
+.cover-abai {
+  background: linear-gradient(145deg, #4a0e1f 0%, #7a1f38 40%, #c9a227 100%);
+}
+.cover-path {
+  background: linear-gradient(160deg, #2a0812 0%, #4a0e1f 50%, #8b7019 100%);
+}
+.cover-poetry {
+  background: linear-gradient(135deg, #7a1f38 0%, #4a0e1f 50%, #e09aad 100%);
+}
+.cover-world {
+  background: linear-gradient(150deg, #1a3a4a 0%, #2d5a6a 40%, #c9a227 100%);
+}
+.cover-folk {
+  background: linear-gradient(145deg, #5c3a1e 0%, #8b5a2b 45%, #e8d48b 100%);
+}
+.cover-epic {
+  background: linear-gradient(160deg, #3a0b18 0%, #6b2d4a 50%, #d4c09a 100%);
+}
+.cover-modern {
+  background: linear-gradient(135deg, #4a0e1f 0%, #9b2d4a 55%, #f0c4d0 100%);
+}
+.cover-classic {
+  background: linear-gradient(145deg, #2a0812 0%, #5c1a30 40%, #c9a227 90%);
+}
+
+/* Decorative book spine */
+.book-spine::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.05)
+  );
+  border-radius: 4px 0 0 4px;
+}
