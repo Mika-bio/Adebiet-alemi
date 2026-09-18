@@ -45,3 +45,14 @@ npm run dev
 | `/tapsyrmalar` | Тапсырмалар (auth) |
 | `/muzyka` | Жыр-терме-күй |
 | `/aqyndar` | Ақындар мен жазушылар |
+
+## Cloudflare Pages (static export)
+
+`output: 'export'` қосылған. Жинау және deploy:
+
+```bash
+npm run build
+npx wrangler pages deploy out --project-name=adebiet-alemi
+```
+
+`wrangler@3` — Node 20 үйлесімді.
